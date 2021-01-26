@@ -26,3 +26,13 @@ function divideNum(firstNumber,secondNumber){
     console.log("Quotient = " +Quot.toFixed(2))
 }
 
+
+(function(){
+    let opr=prompt("Choose an operator (+,-,*,/)");
+    if(opr=="-"){subtractNum(firstNumber,secondNumber);}
+    else if(opr=="/"){divideNum(firstNumber, secondNumber)}
+    firstNumber=prompt("Enter the first number");
+    secondNumber=prompt("Enter the second number")
+
+    
+}) ();

@@ -61,6 +61,9 @@ function multiplyNum(){
 
 
 function divideNum(firstNumber,secondNumber){
+    while(secondNumber==0){
+      secondNumber=prompt("Enter a none-zero number for denominator");
+    }
     let Quot= parseFloat(firstNumber) /parseFloat(secondNumber);
 
     console.log("Quotient = " +Quot)

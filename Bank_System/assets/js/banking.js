@@ -1,9 +1,9 @@
 var account={
-    Name="",
-    acc_no="",
-    balance=""
+    Name:"",
+    acc_no:"",
+    balance:""
 
-}
+};
 
 (function(){
 
@@ -17,6 +17,8 @@ var account={
 
 
 })();
+
+
 function Deposit(){   
     var depo=parseFloat(prompt("Enter the amount you are depositing"));
     account.balance+=depo;
@@ -32,5 +34,10 @@ function Balance(){
 
 }
 function Transfer(){
-    
+    var trs=parseFloat(prompt("Enter the amount you are transfering"));
+    account.balance-=trs;
+    var recepant=new account();
+    recepant.Name=prompt("Enter the recepant's name");
+    recepant.acc_no=prompt("Enter the recepant's account number");
+    recepant.balance+=trs;
 }

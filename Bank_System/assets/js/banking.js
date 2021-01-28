@@ -1,7 +1,14 @@
 var account={
     Name:"",
     acc_no:"",
-    balance:""
+    balance:"3000"
+
+};
+
+var account2={
+    Name:"",
+    acc_no:"",
+    balance:"5000"
 
 };
 
@@ -41,9 +48,15 @@ function Balance(){
 }
 function Transfer(){
     var trs=parseFloat(prompt("Enter the amount you are transfering"));
-    account.balance-=trs;
-    var recepant=new account();
-    recepant.Name=prompt("Enter the recepant's name");
-    recepant.acc_no=prompt("Enter the recepant's account number");
-    recepant.balance+=trs;
+    
+    var recepant=prompt("Choose an account (1/2)");
+    if(recepant==2){
+        account.balance-=trs;
+        account2.balance+=trs;
+    }
+    else{
+        account.balance+=trs;
+        account2.balance-=trs;
+    }
+    return "Your transfer is succesful.";
 }
